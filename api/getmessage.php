@@ -16,13 +16,13 @@ $json_resp = null;
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-	$json_resp = ['response' => $row['message']];  
-}
+    $json_resp = ['response' => $row['message']];  
+  }
 } else {
-	$json_resp = ['response' => 'No rows fetched'];
+	$json_resp = ['error' => 'No rows fetched'];
 }
 $conn->close();
-
+// test comment useless fixed last pull
 header('Content-Type: application/json');
 
 echo json_encode($json_resp);
