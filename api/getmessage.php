@@ -16,7 +16,7 @@ $json_resp = null;
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    $json_resp = ['response' => $row['message']];  
+    $json_resp = ['responses' => $row['message']];  
   }
 } else {
 	$json_resp = ['error' => 'No rows fetched'];
