@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
 	$json_resp = ['error' => 'No rows fetched'];
 }
 $conn->close();
-
+//useless comment
 header('Content-Type: application/json');
 
 echo json_encode($json_resp);
